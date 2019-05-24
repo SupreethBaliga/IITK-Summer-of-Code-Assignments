@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Assignment1</title>
+    <style type="text/css">
+      body {
+        background: #6699ff;
+      }
+
+      .frame {
+        margin: auto;
+        display: block;
+      }
+
+      h2,
+      h3 {
+        text-align: center;
+        text-decoration: underline;
+        color: #000000;
+      }
+
+      #form1 {
+        text-align: center;
+      }
+
+      #division {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function changeSiteWithText() {
+        var text = document.getElementById("text1");
+        var frame = document.getElementById("frame1");
+        frame.setAttribute("src", text.value);
+      }
+
+      function changeDims() {
+        var height = document.getElementById("heightText").value;
+        var width = document.getElementById("widthText").value;
+        var frame = document.getElementById("frame1");
+        frame.setAttribute("height", height);
+        frame.setAttribute("width", width);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>My First Subwindow</h2>
+    <iframe
+      src="https://www.wikipedia.org"
+      class="frame"
+      id="frame1"
+      height="400px"
+      width="600px"
+    ></iframe>
+    <form id="form1">
+      <input type="text" id="text1" placeholder="Enter a URL" value="" />
+      <button id="btn" onclick="changeSiteWithText()" type="button">GO!</button>
+    </form>
+  </body>
+</html>
