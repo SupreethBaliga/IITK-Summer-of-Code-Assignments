@@ -1,74 +1,49 @@
 body {
     margin: 0;
     background: #e6e6e6;
-}
-
-.showSlide {
-    display: none
-}
-
-.showSlide img {
-    width: 100%;
+    text-align: center;
 }
 
 .slidercontainer {
-    max-width: 1000px;
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+    overflow-x: hidden;
+}
+
+.images {
+    width: 5400px;
     position: relative;
-    margin: auto;
+    overflow: hidden;
 }
 
-.left,
-.right {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+.images img {
+    float: left;
+    width: 900px;
 }
 
-.right {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+
+.arrow {
+    color: rgb(214, 209, 209);
+    float: right;
+    margin-top: 280px;
+    transform: scale(5);
 }
 
-.left:hover,
-.right:hover {
-    background-color: rgba(115, 115, 115, 0.8);
+.arrow:hover {
+    transform: scale(6);
 }
 
-.active {
-    background-color: #717171;
+.arrow-left {
+    margin-left: 50px;
+    float: left;
 }
 
-.slide-effect {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+.arrow-right {
+    margin-right: 50px;
+    float: right;
 }
 
-@-webkit-keyframes fade {
-    from {
-        opacity: .2
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .2
-    }
-
-    to {
-        opacity: 1
-    }
+#imgs {
+    transition: transform 0.7s ease-in-out;
 }
